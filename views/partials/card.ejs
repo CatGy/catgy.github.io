@@ -1,0 +1,18 @@
+<figure class="card">
+    <a href="<%= link %>">
+        <div class="imgcard">
+        <img class="<% if (!isCard) { %> pictures <% } %>" src="<%= imgsrc %>" alt="<%= imgalt %>">
+        </div>
+        <figcaption class="">
+            <%= caption %>
+        </figcaption>
+        <% if (isCard) { %>
+        <h4 class="">
+            <%= card_title %>
+        </h4>
+        <p class="">
+            <%= card_text %>
+        </p>
+        <% } %>
+    </a>
+</figure>

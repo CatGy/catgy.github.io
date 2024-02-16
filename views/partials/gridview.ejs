@@ -1,0 +1,5 @@
+<div class="gallery">
+    <% for (var i = 0; i < data.length; i++ ) { %>
+        <%- include('card', {link: data[i].link, imgsrc: data[i].img, imgalt: data[i].alt, caption: data[i].caption, card_title: data[i].title, card_text: data[i].text, isCard: isCard } ); -%>
+    <% } %>
+</div>

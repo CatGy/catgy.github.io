@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('partials/head'); -%>
+</head>
+
+<body>
+    <header>
+      <%- include('partials/navbar'); -%>
+    </header>
+    <main>
+      <h1>
+        <%= title %>
+      </h1>
+      <%- include('partials/hero_video', {video_src: vidsrc, vid_height: 500, vid_width: (500*1.78), ismp4: ismp4}); -%>
+      <section>
+        <h2>Tools</h2>
+
+      </section>
+      <hr/>
+      <p class="descr"><%= description %></p> 
+      <hr/>
+      <%- include('partials/portfolio_article', {_articles: articles}); -%>
+    </main>
+    <% if(hasLink) { %>
+      <p><a class="link" href="<%= creditSrc %>"><%= linkName%></a></p>
+    <% } %>
+    <footer>
+      <%- include('partials/footer'); -%>
+    </footer>
+  </body>
+
+</html>

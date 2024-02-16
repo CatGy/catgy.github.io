@@ -1,0 +1,56 @@
+
+    <% for (var i=0; i < _articles.length; i++ ) { %>
+        <section>
+        <% if(_articles[i].hasTitle) {%>
+        <header>
+            <h2>
+                <%= _articles[i].article_header %>
+            </h2>
+        </header>
+        <% } %>
+        <% if(_articles[i].hasSubtitle) {%>
+            <h3>
+                <%= _articles[i].subtitle %>
+            </h3>
+        <% } %>
+        <article class="user_article <% if(i % 2 != 0) {%>reverse<% } %>">
+            <figure>
+                <img src="<%= _articles[i].article_image %>" alt="<%= _articles[i].article_img_alt %>">
+                <figcaption>
+                    <%= _articles[i].article_img_caption %>
+                </figcaption>
+            </figure>
+            <% if(_articles[i].isContentList) { %>
+            <div>
+            <ul>
+            <% for (var j=0; j < _articles[i].article_content.length; j++ ) { %>
+                <% if(_articles[i].article_content[j].isColorPalette) {%>
+                    <%- include('color_palette', {colors: _articles[i].article_content[j].colors}) %>
+                <% } else { %>
+                    <li>
+                        <p>
+                            <%= _articles[i].article_content[j] %>
+                        </p>
+                    </li>
+                <% } %>    
+            <% } %>
+            </ul>
+            <% } else { %>
+            <div>
+                <p>
+                    <%= _articles[i].article_content %>
+                </p>
+            </div>
+            <% } %>
+            <% if (_articles[i].hasLink) { %>
+            <div class="article_link">
+                <a href="<%= _articles[i].article_link %>"><%= _articles[i].article_link_text %></a>
+            </div>
+            <% } %>
+        </div>
+        </article>
+        <% if(_articles[i].hasMoreImages) { %>
+            <%- include('gridview', {data: _articles[i].extraImages, isCard: false}); -%>
+        <% } %>
+    </section>
+    <% } %>

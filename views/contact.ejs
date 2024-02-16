@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('partials/head'); -%>
+</head>
+
+<body class= "contact_page">
+    <header>
+        <%- include('partials/navbar'); -%>
+    </header>
+    <main>
+        <h1>
+            <%= title %>
+        </h1>
+        <% if(isform) { %>
+        <%- include('partials/form', {data: data, subtitle: subtitle}) -%>
+        <% } else { %>
+        <%- include('partials/contact', {data: data, subtitle: subtitle}) -%>   
+        <% } %>
+    </main>
+    <footer>
+      <%- include('partials/footer'); -%>
+    </footer>
+</body>
+
+</html>
