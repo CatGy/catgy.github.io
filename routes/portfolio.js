@@ -1,7 +1,11 @@
 var express = require("express");
 var router = express.Router();
-var content = require("../server/data");
-
+var julimayArticles = require("../server/julimay_articles");
+var pawpatrolArticles = require("../server/pawpatrol_articles");
+var helpoArticles = require("../server/helpo_articles");
+var greenthermiqueArticles = require("../server/greenthermique_articles");
+var caribfoodArticles = require("../server/caribfood_articles");
+var furnitureArticles = require("../server/furniture_articles");
 /**
  * Portfolio page data
  */
@@ -68,38 +72,38 @@ router.get("/", function (req, res, next) {
 router.get("/greenthermique", function (req, res, next) {
   res.render("page", {
     title: "Green Thermique",
-    description:
-      "My objective was to craft a logo for an emerging entrepreneur within the renewable energy sector. I wanted to convey a clear message of sustainability in a world powered by various natural sources. During my ideation process, I focused on creating one impactful image to catch people's attention in a busy world.",
+    description: greenthermiqueArticles.Intro,
     page: "greenthermique",
     hasLink: false,
     vidsrc: "https://www.youtube.com/embed/2ZHehrLd2Sg?si=fyUS0zYW0n2ehPdn",
     ismp4: false,
-    articles: content.GreenthermiquePortfolioArticles,
+    articles: greenthermiqueArticles.Content,
+    tools: greenthermiqueArticles.Tools,
   });
 });
 
 router.get("/caribfood", function (req, res, next) {
   res.render("page", {
     title: "CaribFood",
-    description:
-      "My aim for this project was to develop an engaging brand video for the Paw Patrol tv show, using bright colors, graphics and designed for the Paw Patrol brand to cater to a wide audience, During the process, I create a complete motion graphics package, including a logo animation, lower thirds, and transition bumpers. Each element was carefully designed to reflect the brand's identity and offer a great viewer experience.",
+    description: caribfoodArticles.Intro,
     page: "caribfood",
     vidsrc: "https://www.youtube.com/embed/1YwwnlAmkLU?si=xWWL8nwuwSzSuFtX",
     ismp4: false,
     hasLink: false,
-    articles: content.CaribfoodPortfolioArticles,
+    articles: caribfoodArticles.Content,
+    tools: caribfoodArticles.Tools,
   });
 });
 
 router.get("/pawpatrol", function (req, res, next) {
   res.render("page", {
     title: "Paw Patrol",
-    description:
-      "My aim for this project was to develop an engaging brand video for the Paw Patrol tv show, using bright colours, graphics and designed for the Paw Patrol brand to cater to a wide audience, During the process, I create a complete motion graphics package, including a logo animation, lower thirds, and transition bumpers. Each element was carefully designed to reflect the brand's identity and offer a great viewer experience.",
+    description: pawpatrolArticles.Intro,
     page: "pawpatrol",
     vidsrc: "https://www.youtube.com/embed/lI-HcSv-3CY?si=WRGYk0_teEkf_4Eb",
     ismp4: false,
-    articles: content.PawpatrolArticles,
+    articles: pawpatrolArticles.Content,
+    tools: pawpatrolArticles.Tools,
     hasLink: false,
     creditSrc:
       "https://www.freepik.com/free-vector/abstract-blue-business-collateral-set_3009933.htm",
@@ -110,12 +114,12 @@ router.get("/pawpatrol", function (req, res, next) {
 router.get("/helpo", function (req, res, next) {
   res.render("page", {
     title: "Helpo",
-    description:
-      "This project aims to develop a routine application that immerses children in interactive, educational adventures related to daily routines; but overall helps them self-regulate and understand the importance of routines.",
+    description: helpoArticles.Intro,
     page: "helpo",
     vidsrc: "https://www.youtube.com/embed/rqQfoLefWLQ?si=DbzzPMYjJHsZXPxA",
     ismp4: false,
-    articles: content.HelpoArticles,
+    articles: helpoArticles.Content,
+    tools: helpoArticles.Tools,
     hasLink: false,
     //creditSrc: "https://www.freepik.com/free-vector/abstract-blue-business-collateral-set_3009933.htm",
     //linkName: "Image by starline on Freepik",
@@ -125,12 +129,12 @@ router.get("/helpo", function (req, res, next) {
 router.get("/julimay", function (req, res, next) {
   res.render("page", {
     title: "Julimay Grocery Shop",
-    description:
-      "My aim for this project was to develop an engaging brand video for the Paw Patrol tv show, using bright colours, graphics and designed for the Paw Patrol brand to cater to a wide audience, During the process, I create a complete motion graphics package, including a logo animation, lower thirds, and transition bumpers. Each element was carefully designed to reflect the brand's identity and offer a great viewer experience.",
+    description: julimayArticles.Intro,
     page: "julimay",
     vidsrc: "https://www.youtube.com/embed/E4rnCT-Kb7U?si=YvRReXoGUAjfwW-w",
     ismp4: false,
-    articles: content.JulimayArticles,
+    articles: julimayArticles.Content,
+    tools: julimayArticles.Tools,
     hasLink: false,
     //creditSrc: "https://www.freepik.com/free-vector/abstract-blue-business-collateral-set_3009933.htm",
     //linkName: "Image by starline on Freepik",
@@ -140,13 +144,14 @@ router.get("/julimay", function (req, res, next) {
 router.get("/furniture", function (req, res, next) {
   res.render("page", {
     title: "Furniture App",
-    description:
-      "My goal for this project was to create 3d Furniture pieces in 3d stager. Once the furnitures were created and rendered, I exported them into Adobe Aero to create the Augmented Reality Animation allowing users to visualize and manipulate the furnitures in their own space. This concept is similar to other existing App offering you the similar in-person shopping experience.",
+    description: furnitureArticles.Intro,
     page: "furniture",
     vidsrc: "https://www.youtube.com/embed/rqQfoLefWLQ?si=DbzzPMYjJHsZXPxA",
     ismp4: false,
-    articles: content.HelpoArticles,
+    articles: furnitureArticles.Content,
+    tools: furnitureArticles.Tools,
     hasLink: false,
+
     //creditSrc: "https://www.freepik.com/free-vector/abstract-blue-business-collateral-set_3009933.htm",
     //linkName: "Image by starline on Freepik",
   });

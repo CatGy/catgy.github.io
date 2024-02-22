@@ -1,3 +1,5 @@
+/** MENU SECTION */
+
 let burgerMenuOpen = false;
 
 function open_menu(event) {
@@ -14,23 +16,36 @@ function closePanel(event) {
   }, 1000);
 }
 
+function toggleSubMenu(event) {
+  if (burgerMenuOpen) {
+    closeSubMenu(event);
+  } else {
+    openSubMenu(event);
+  }
+}
+
 function openSubMenu(event) {
   console.log("openSubMenu");
+  burgerMenuOpen = true;
   $(".mobile-sub").removeClass("collapse");
   $(".mobile-sub").addClass("extend");
   $(".plusicon").attr("visibility", "hidden");
-  $(".minusicon").attr("visibility", "hidden");
+  $(".minusicon").attr("visibility", "visible");
 }
 
 function closeSubMenu(event) {
+  burgerMenuOpen = false;
   $(".mobile-sub").removeClass("extend");
   $(".mobile-sub").addClass("collapse");
+  $(".plusicon").attr("visibility", "visible");
+  $(".minusicon").attr("visibility", "hidden");
 
   setTimeout(() => {
     $(".mobile-sub").removeClass("collapse");
   }, 1000);
 }
 
+/** TOGGLER SECTION */
 let theme_toggler = document.querySelector("#theme_toggler");
 
 theme_toggler.addEventListener("click", function () {
