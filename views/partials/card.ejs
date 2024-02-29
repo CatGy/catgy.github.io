@@ -1,10 +1,10 @@
-<figure class="card">
+<figure class="card <% if (fullScreen) { %> full <% } %>" <% if (isModal) { %> onclick="openModal(event, '<%= modal_id %>', '<%= imgsrc %>', '<% if (captionList) {%><%- captionList %><%} else {%> <%- caption %> <% } %>')" <% } %>>
     <a href="<%= link %>">
         <div class="imgcard">
-        <img class="<% if (!isCard) { %> pictures <% } %>" src="<%= imgsrc %>" alt="<%= imgalt %>">
+        <img class="<% if (!isCard) { %> pictures <% } %> <% if (fullScreen) { %> full <% } %>" src="<%= imgsrc %>" alt="<%= imgalt %>">
         </div>
         <figcaption class="">
-            <%= caption %>
+            <%- caption %>
         </figcaption>
         <% if (isCard) { %>
         <h4 class="">
@@ -16,3 +16,32 @@
         <% } %>
     </a>
 </figure>
+
+<% if (isModal) { %>
+<dialog class="<%= modal_id %>">
+    <h3>Photo preview</h3>
+    <div class="card-row">
+    <% if (isCaroussel) { %>
+    <div class="arrow" onclick="leftCarrousselBtnPressed([<%- imgList %>], [<%- captionList %>] )"><svg xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 -960 960 960" width="50"><path d="M560-280 360-480l200-200v400Z"/></svg></div>
+    <% } %>
+    <div class="imgcard">
+        <% if (isSvg) { %>
+        <object type="image/svg+xml" data="<%= imgsrc %>" class="carousselImg">
+            Your browser does not support SVG
+        </object>
+        <% } else { %>
+        <img class="carousselImg" src="<%= imgsrc %>" alt="<%= imgalt %>" ongoing="false">
+        <% } %>
+    </div>
+    <% if (isCaroussel) { %>
+    <div class="arrow" onclick="rightCarrousselBtnPressed([<%- imgList %>], [<%- captionList %>] )"><svg xmlns="http://www.w3.org/2000/svg" height="50" viewBox="0 -960 960 960" width="50"><path d="M400-280v-400l200 200-200 200Z"/></svg></div>
+    <% } %>
+    </div>
+    <figcaption class="carousselCaption">
+        <%= caption %>
+    </figcaption>
+    <form method="dialog">
+        <button>Close</button>
+    </form>
+</dialog>
+<% } %>

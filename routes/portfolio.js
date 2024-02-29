@@ -75,7 +75,7 @@ router.get("/greenthermique", function (req, res, next) {
     description: greenthermiqueArticles.Intro,
     page: "greenthermique",
     hasLink: false,
-    vidsrc: "https://www.youtube.com/embed/2ZHehrLd2Sg?si=fyUS0zYW0n2ehPdn",
+    vidsrc: "https://www.youtube.com/embed/iS1BQzv_Syk?si=1kfnv_Lq7Yuuqe09",
     ismp4: false,
     articles: greenthermiqueArticles.Content,
     tools: greenthermiqueArticles.Tools,

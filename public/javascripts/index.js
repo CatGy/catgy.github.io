@@ -1,3 +1,13 @@
+/** DIALOG */
+
+function openModal(event, id, img, caption) {
+  $(".carousselImg").attr("src", img);
+  $(".carousselCaption").text(caption);
+  setTimeout(() => {
+    $(`.${id}`)[0].showModal();
+  }, 200);
+}
+
 /** MENU SECTION */
 
 let burgerMenuOpen = false;
@@ -65,6 +75,54 @@ function retrieve_theme() {
   }
 }
 
+/**CAROUSSEL SECTION */
+function leftCarrousselBtnPressed(imgList, captionList) {
+  if (
+    imgList instanceof Array &&
+    $(".carousselImg").attr("ongoing") == "false"
+  ) {
+    let currIndex = imgList.indexOf($(".carousselImg").attr("src"));
+    if (currIndex == 0) {
+      currIndex = imgList.length;
+    }
+    currIndex = currIndex - 1;
+    $(".carousselImg").addClass("slide-left");
+    $(".carousselImg").attr("ongoing", "true");
+    setTimeout(() => {
+      $(".carousselImg").attr("src", imgList[currIndex]);
+      $(".carousselCaption").text(captionList[currIndex]);
+      setTimeout(() => {
+        $(".carousselImg").removeClass("slide-left");
+        $(".carousselImg").attr("ongoing", "false");
+      }, 800);
+    }, 200);
+  }
+}
+
+function rightCarrousselBtnPressed(imgList, captionList) {
+  if (
+    imgList instanceof Array &&
+    $(".carousselImg").attr("ongoing") == "false"
+  ) {
+    let currIndex = imgList.indexOf($(".carousselImg").attr("src"));
+    if (currIndex == imgList.length - 1) {
+      currIndex = -1;
+    }
+    currIndex = currIndex + 1;
+    $(".carousselImg").addClass("slide-right");
+    $(".carousselImg").attr("ongoing", "true");
+    setTimeout(() => {
+      $(".carousselImg").attr("src", imgList[currIndex]);
+      $(".carousselCaption").text(captionList[currIndex]);
+      setTimeout(() => {
+        $(".carousselImg").removeClass("slide-right");
+        $(".carousselImg").attr("ongoing", "false");
+      }, 800);
+    }, 200);
+  }
+}
+
+/** THEME SECTION */
 retrieve_theme();
 
 window.addEventListener(

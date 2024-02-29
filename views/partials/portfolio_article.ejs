@@ -13,14 +13,19 @@
                 <%= _articles[i].subtitle %>
             </h3>
         <% } %>
-            <article class="user_article <% if(i % 2 != 0) {%>reverse<% } %>">
+        <%if (_articles[i].article_leading_content) { %>
+            <div>
+                <p class="text-align-left pb-50">
+                    <%- _articles[i].article_leading_content %>
+                </p>
+            </div>
+        <% } %>
+            <article class="user_article">
             <% if(_articles[i].hasFigure) {%>
-                <figure>
-                    <img src="<%= _articles[i].article_image %>" alt="<%= _articles[i].article_img_alt %>">
-                    <figcaption>
-                        <%= _articles[i].article_img_caption %>
-                    </figcaption>
-                </figure>
+                    <%- include('gridview', {data: _articles[i].article_figures, isCard: false}); -%>
+            <% } %>
+            <% if(_articles[i].hasVideo) {%>
+                <%- include('video_player', {video_src: _articles[i].vidsrc, vid_height: 500, vid_width: (500*1.78), ismp4: _articles[i].ismp4}); -%>
             <% } %>
             <% if(_articles[i].isContentList) { %>
                 <div>
@@ -46,7 +51,7 @@
                     <ul>
                     <% } %>
                 </div>
-            <% } else { %>
+            <% } else if (_articles[i].article_content) { %>
                 <div>
                     <p>
                         <%- _articles[i].article_content %>
