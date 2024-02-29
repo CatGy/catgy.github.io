@@ -4,14 +4,14 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var favicon = require("serve-favicon");
 var logger = require("morgan");
-
+const compression = require("compression");
 var homeRouter = require("./routes/home");
 var portfolioRouter = require("./routes/portfolio");
 var contactRouter = require("./routes/contact");
 var aboutRouter = require("./routes/about");
 
 var app = express();
-
+app.use(compression());
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
