@@ -35,7 +35,7 @@ const FormData = [
 
 /* GET endpoints */
 router.get("/", function (req, res, next) {
-  res.render("contact", {
+  res.render("../../views/contact", {
     title: "Contact me",
     page: "contact",
     data: FormData,

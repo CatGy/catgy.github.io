@@ -11,7 +11,7 @@ const AboutData = {
 
 /* GET endpoints */
 router.get("/", function (req, res, next) {
-  res.render("about", {
+  res.render("../../views/about", {
     title: AboutData.title,
     page: "about",
     data: AboutData,

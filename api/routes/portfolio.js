@@ -1,11 +1,11 @@
 var express = require("express");
 var router = express.Router();
-var julimayArticles = require("../server/julimay_articles");
-var pawpatrolArticles = require("../server/pawpatrol_articles");
-var helpoArticles = require("../server/helpo_articles");
-var greenthermiqueArticles = require("../server/greenthermique_articles");
-var caribfoodArticles = require("../server/caribfood_articles");
-var furnitureArticles = require("../server/furniture_articles");
+var julimayArticles = require("../../server/julimay_articles");
+var pawpatrolArticles = require("../../server/pawpatrol_articles");
+var helpoArticles = require("../../server/helpo_articles");
+var greenthermiqueArticles = require("../../server/greenthermique_articles");
+var caribfoodArticles = require("../../server/caribfood_articles");
+var furnitureArticles = require("../../server/furniture_articles");
 /**
  * Portfolio page data
  */
@@ -62,7 +62,7 @@ const PortfolioData = [
 
 /* GET endpoints */
 router.get("/", function (req, res, next) {
-  res.render("portfolio", {
+  res.render("../../views/portfolio", {
     title: "Portfolio",
     page: "portfolio",
     data: PortfolioData,
@@ -70,7 +70,7 @@ router.get("/", function (req, res, next) {
 });
 
 router.get("/greenthermique", function (req, res, next) {
-  res.render("page", {
+  res.render("../../views/page", {
     title: "Green Thermique",
     description: greenthermiqueArticles.Intro,
     page: "greenthermique",
@@ -83,7 +83,7 @@ router.get("/greenthermique", function (req, res, next) {
 });
 
 router.get("/caribfood", function (req, res, next) {
-  res.render("page", {
+  res.render("../../views/page", {
     title: "CaribFood",
     description: caribfoodArticles.Intro,
     page: "caribfood",
@@ -96,7 +96,7 @@ router.get("/caribfood", function (req, res, next) {
 });
 
 router.get("/pawpatrol", function (req, res, next) {
-  res.render("page", {
+  res.render("../../views/page", {
     title: "Paw Patrol",
     description: pawpatrolArticles.Intro,
     page: "pawpatrol",
@@ -112,7 +112,7 @@ router.get("/pawpatrol", function (req, res, next) {
 });
 
 router.get("/helpo", function (req, res, next) {
-  res.render("page", {
+  res.render("../../views/page", {
     title: "Helpo",
     description: helpoArticles.Intro,
     page: "helpo",
@@ -127,7 +127,7 @@ router.get("/helpo", function (req, res, next) {
 });
 
 router.get("/julimay", function (req, res, next) {
-  res.render("page", {
+  res.render("../../views/page", {
     title: "Julimay Grocery Shop",
     description: julimayArticles.Intro,
     page: "julimay",
@@ -142,7 +142,7 @@ router.get("/julimay", function (req, res, next) {
 });
 
 router.get("/furniture", function (req, res, next) {
-  res.render("page", {
+  res.render("../../views/page", {
     title: "Furniture App",
     description: furnitureArticles.Intro,
     page: "furniture",
