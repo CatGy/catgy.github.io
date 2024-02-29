@@ -64,7 +64,7 @@ const Content = [
         alt: "Greenthermique logo 1",
         caption: "Gradient Logo<br>Click for more details",
         captionList: [
-          "Gradient colours offer a modern and dynamic look, add depth and dimension, reflect a unique brand personality, emphasize visual interest, and enhance the overall user experience on digital platforms.",
+          "'Gradient colours offer a modern and dynamic look, add depth and dimension, reflect a unique brand personality, emphasize visual interest, and enhance the overall user experience on digital platforms.'",
         ],
         title: "",
         text: "",
@@ -77,7 +77,7 @@ const Content = [
         alt: "Greenthermique logo 2",
         caption: "Solid logo<br>Click for more details",
         captionList: [
-          "Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.",
+          "'Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.'",
         ],
         title: "",
         text: "",
@@ -109,7 +109,7 @@ const Content = [
         caption:
           "Green Thermique Business front card<br>Click for more details",
         captionList: [
-          "Front card. The designs has two tones of green, dark and light that creates an eye-catching and harmonious visual. The company logo stands proudly, symbolizing its commitment to eco-friendly practices. The name of the owner, direct phone number, email, and website is listed on the right side.",
+          "'Front card. The designs has two tones of green, dark and light that creates an eye-catching and harmonious visual. The company logo stands proudly, symbolizing its commitment to eco-friendly practices. The name of the owner, direct phone number, email, and website is listed on the right side.'",
         ],
         title: "",
         text: "",
@@ -122,7 +122,7 @@ const Content = [
         alt: "Green Thermique Business back card",
         caption: "Green Thermique Business back card<br>Click for more details",
         captionList: [
-          "Back Card, similar design with a QR code to visit Green Thermique&#146;s website. The front desk number, physical address and email is listed. This business card makes it easy to get in touch and shows Green Thermique&#146;s dedication to being green and easy to work with.",
+          "'Back Card, similar design with a QR code to visit Green Thermique&#146;s website. The front desk number, physical address and email is listed. This business card makes it easy to get in touch and shows Green Thermique&#146;s dedication to being green and easy to work with.'",
         ],
         title: "",
         text: "",

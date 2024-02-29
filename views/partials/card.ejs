@@ -1,4 +1,4 @@
-<figure class="card <% if (fullScreen) { %> full <% } %>" <% if (isModal) { %> onclick="openModal(event, '<%= modal_id %>', '<%= imgsrc %>', '<% if (captionList) {%><%- captionList %><%} else {%> <%- caption %> <% } %>')" <% } %>>
+<figure class="card <% if (fullScreen) { %> full <% } %>" <% if (isModal) { %> onclick="openModal(event, '<%= modal_id %>', '<%= imgsrc %>', <% if (captionList) {%><%- captionList %><%} else {%> '<%- caption %>' <% } %>)" <% } %>>
     <a href="<%= link %>">
         <div class="imgcard">
         <img class="<% if (!isCard) { %> pictures <% } %> <% if (fullScreen) { %> full <% } %>" src="<%= imgsrc %>" alt="<%= imgalt %>">

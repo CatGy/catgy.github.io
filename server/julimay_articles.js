@@ -65,7 +65,7 @@ const Content = [
     subtitle: "Storyboard",
     hasTitle: false,
     hasSubtitle: true,
-    hasFigure: true,
+    hasFigure: false,
     article_content: [
       "This next step goal was to developed a detailed storyboard to visualize the interview's structure and flow. It outlined the sequence of shots, camera angles, and transitions to capture Meredith's journey effectively. Additionally, the storyboard incorporated B-rolls showcasing Meredith's daily operations at the grocery store. This visual roadmap guided the filming process and ensured cohesive storytelling.",
     ],

@@ -60,7 +60,7 @@ const Content = [
         alt: "Caribfood logo 1",
         caption: "Filled Logo<br>Click for more details",
         captionList: [
-          "Gradient colours offer a modern and dynamic look, add depth and dimension, reflect a unique brand personality, emphasize visual interest, and enhance the overall user experience on digital platforms.",
+          "'Gradient colours offer a modern and dynamic look, add depth and dimension, reflect a unique brand personality, emphasize visual interest, and enhance the overall user experience on digital platforms.'",
         ],
         title: "",
         text: "",
@@ -73,7 +73,7 @@ const Content = [
         alt: "Caribfood logo 2",
         caption: "Outlined logo<br>Click for more details",
         captionList: [
-          "Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.",
+          "'Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.'",
         ],
         title: "",
         text: "",
@@ -122,7 +122,7 @@ const Content = [
         alt: "portfolio image 1",
         caption: "Tools: Adobe Illustrator",
         captionList: [
-          "Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.",
+          "'Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.'",
         ],
         title: "",
         text: "",
@@ -135,7 +135,7 @@ const Content = [
         alt: "portfolio image 1",
         caption: "Tools: Adobe Illustrator",
         captionList: [
-          "Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.",
+          "'Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.'",
         ],
         title: "",
         text: "",
@@ -195,7 +195,7 @@ const Content = [
         alt: "Business card 1",
         caption: "Business card 1<br>Click for more details",
         captionList: [
-          "Gradient colours offer a modern and dynamic look, add depth and dimension, reflect a unique brand personality, emphasize visual interest, and enhance the overall user experience on digital platforms.",
+          "'Gradient colours offer a modern and dynamic look, add depth and dimension, reflect a unique brand personality, emphasize visual interest, and enhance the overall user experience on digital platforms.'",
         ],
         title: "",
         text: "",
@@ -208,7 +208,7 @@ const Content = [
         alt: "Business card 2",
         caption: "Business card 2<br>Click for more details",
         captionList: [
-          "Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.",
+          "'Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.'",
         ],
         title: "",
         text: "",
@@ -221,7 +221,7 @@ const Content = [
         alt: "Business card 3",
         caption: "Business card 3<br>Click for more details",
         captionList: [
-          "Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.",
+          "'Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.'",
         ],
         title: "",
         text: "",
@@ -234,7 +234,7 @@ const Content = [
         alt: "Business card 4",
         caption: "Business card 4<br>Click for more details",
         captionList: [
-          "Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.",
+          "'Solid colours are often associated with timelessness and simplicity. They add scalability, versatility, visibility  across mediums. Overall they convey a sense of readability and set an easy and memorable brand recognition overtime.'",
         ],
         title: "",
         text: "",
@@ -284,7 +284,7 @@ const Content = [
         alt: "Business card 1",
         caption: "Business card 1<br>Click for more details",
         captionList: [
-          "Gradient colours offer a modern and dynamic look, add depth and dimension, reflect a unique brand personality, emphasize visual interest, and enhance the overall user experience on digital platforms.",
+          "'Gradient colours offer a modern and dynamic look, add depth and dimension, reflect a unique brand personality, emphasize visual interest, and enhance the overall user experience on digital platforms.'",
         ],
         title: "",
         text: "",
