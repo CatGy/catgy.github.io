@@ -6,6 +6,11 @@
   font-family: "Amsterdam";
   src: url("../fonts/Amsterdam.ttf");
 }
+* {
+  width: inherit;
+  height: inherit;
+  user-select: none;
+}
 /* COMMON */
 .dark-mode {
   --text-color: #f7f7f7;
@@ -117,17 +122,27 @@ header > h2 {
   text-align: center;
   font-family: Playfair Display;
   font-size: 36px;
-  margin-top: 70px;
-  margin-bottom: 70px;
 }
 
 section > header {
   margin-bottom: 20px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 section {
-  padding-left: 5%;
-  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+section h2 {
+  align-self: center;
+}
+
+section h3 {
+  align-self: flex-start;
 }
 
 section .card {
@@ -157,6 +172,25 @@ iframe {
 #theme_toggler {
   fill: var(--text-color);
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-right: 10px;
+  margin-top: 25px;
+}
+
+#top_scroller {
+  fill: var(--text-color);
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 10px;
+  margin-bottom: 25px;
 }
 
 .tools ul {
@@ -166,6 +200,8 @@ iframe {
   row-gap: 20px;
   column-gap: 50px;
   flex-wrap: wrap;
+  padding: 0;
+  width: auto;
 }
 
 .tools-section {
@@ -203,10 +239,15 @@ iframe {
   text-align: justify;
 }
 
+.user_article ul {
+  width: auto;
+}
+
 .video {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  height: 500px;
   /*padding: 50px;*/
 }
 
@@ -271,8 +312,6 @@ footer {
 
 .descr {
   text-align: justify;
-  padding-left: 5%;
-  padding-right: 5%;
 }
 
 figure {
@@ -433,8 +472,6 @@ input[type="submit"]:hover {
 
 /* CARD */
 .card {
-  min-height: 436px;
-  min-width: 350px;
   max-width: 350px;
   background-color: var(--modal-bg-color);
   display: flex;
@@ -447,12 +484,9 @@ input[type="submit"]:hover {
   padding: 20px;
   border-radius: 15px;
   justify-content: space-between;
-  height: 100%;
 }
 
 .card a {
-  min-height: 100%;
-  height: inherit;
   display: flex;
   flex-direction: column;
 }
@@ -495,7 +529,6 @@ input[type="submit"]:hover {
 .card figcaption {
   margin-top: 12px;
   text-align: center;
-  margin: 15px 16px;
 
   color: var(--nav-link-color);
   font-family: Arima;
@@ -515,53 +548,70 @@ input[type="submit"]:hover {
   text-align: left;
 }
 
+.action-btn {
+  height: 50px;
+  display: inherit;
+}
+
 .pb-50 {
   padding-bottom: 50px;
 }
 
 dialog {
   flex-direction: column;
-  max-width: calc(100% - 2em - 40%);
-  max-height: 750px;
+  max-width: calc(100% - 2em - 20%);
+  max-height: calc(100% - 2em - 20%);
   gap: 20px;
-  padding: 50px;
   border-radius: 15px;
   background-color: var(--modal-bg-color);
   color: #020202b0;
   border: 1px solid white;
-  overflow: hidden;
   text-align: center;
-  padding: 50px 20px;
+  padding: 20px 20px;
+  height: auto;
+  width: 100%;
+  overflow: auto;
+  margin: 50px auto;
+  justify-content: space-between;
 }
 
 dialog h3 {
   color: var(--text-color);
   font-size: xx-large;
   margin-top: 0px;
+  margin-bottom: 15px;
+  min-height: 100px;
 }
 
 dialog figcaption {
-  font-size: 20px;
+  font-size: 16px;
   margin: 0 auto;
   max-width: 600px;
+  height: auto;
+  overflow-y: auto;
+  min-height: 100px;
 }
 
 dialog .imgcard {
   object-fit: cover;
-  overflow: hidden;
+  overflow-y: auto;
   border-radius: 5px;
+  height: auto;
+  flex-direction: row;
+  display: flex;
+  min-height: 200px;
 }
 
 dialog .imgcard img {
-  max-width: 500px;
+  max-width: 1000px;
   border: 1px solid transparent;
   border-radius: 10px;
+  width: 100%;
 }
 
 dialog button {
   width: 100px;
   padding: 10px;
-  margin: 0 auto;
   background-color: var(--nav-link-color);
   color: var(--modal-text-color);
   border: 1px solid transparent;
@@ -571,18 +621,39 @@ dialog button {
   font-family: "Arima";
   font-weight: 600;
 }
+
 dialog form {
   background: initial;
   border: initial;
-  padding: 10px;
+  padding: 0px;
+  bottom: 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  align-items: center;
+  width: calc(100% - 40px);
 }
+
 dialog .card-row {
   display: flex;
   flex-direction: row;
-  gap: 20px;
   justify-content: center;
   align-items: center;
   margin-bottom: 32px;
+  gap: 20px;
+  height: 80%;
+}
+
+dialog .card-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 88%;
+}
+
+dialog[open] {
+  display: flex;
 }
 
 dialog .arrow {
@@ -658,7 +729,7 @@ dialog .carousselImg {
   }
 
   #hero {
-    width: 80%;
+    width: 100%;
     height: 300px;
   }
   .video iframe {
@@ -680,6 +751,7 @@ dialog .carousselImg {
     justify-content: flex-end;
     margin-top: 90px;
     width: 100%;
+    height: auto;
   }
 
   .menu {
@@ -718,6 +790,10 @@ dialog .carousselImg {
     display: block;
   }
 
+  .mobile-sub li {
+    height: 30px;
+  }
+
   .mobile .nav-link:hover {
     color: var(--nav-link-color);
   }
@@ -749,6 +825,11 @@ dialog .carousselImg {
     gap: 120px;
     margin-top: 0px;
     align-items: center;
+    width: 100%;
+  }
+
+  .mobile-sub-trig .nav-link {
+    width: auto;
   }
 
   .extend-btn {
@@ -789,14 +870,16 @@ dialog .carousselImg {
 
   .extend {
     animation-name: extend-animation;
-    animation-duration: 2s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    animation-timing-function: linear;
   }
 
   .collapse {
     animation-name: collapse-animation;
-    animation-duration: 2s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
+    animation-timing-function: linear;
   }
 
   @keyframes extend-animation {
@@ -882,6 +965,10 @@ dialog .carousselImg {
       opacity: 1;
     }
   }
+
+  .gallery {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1150px) {
@@ -889,6 +976,7 @@ dialog .carousselImg {
     flex-direction: column;
   }
 }
+
 /* TABLET */
 @media screen and (min-width: 701px) and (max-width: 1600px) {
   main {
@@ -903,8 +991,11 @@ dialog .carousselImg {
   .user_article > figure > img {
     object-fit: cover;
     margin: 0 auto;
-    width: inherit;
     max-width: 500px;
+  }
+
+  .card {
+    min-width: 450px;
   }
 
   /*NAVBAR PARTIALS */
@@ -932,8 +1023,8 @@ dialog .carousselImg {
     list-style-type: none;
     padding: 0;
     justify-content: flex-end;
-    margin-right: 166px;
-    align-items: center;
+    align-items: baseline;
+    margin-right: 90px;
   }
 }
 
@@ -952,8 +1043,11 @@ dialog .carousselImg {
   .user_article > figure > img {
     object-fit: cover;
     margin: 0 auto;
-    width: inherit;
     max-width: 500px;
+  }
+
+  .card {
+    min-width: 450px;
   }
 
   /*NAVBAR PARTIALS */
@@ -985,7 +1079,7 @@ dialog .carousselImg {
     list-style-type: none;
     padding: 0;
     justify-content: flex-end;
-    margin-right: 166px;
+    margin-right: 90px;
   }
 
   .sub-menu {
@@ -1033,6 +1127,12 @@ dialog .carousselImg {
   gap: 0px !important;
   padding-top: 10px !important;
   align-items: unset !important;
+  height: 180px;
+  margin: 0;
+}
+
+.sub-menu-item {
+  height: 30px;
 }
 
 .has-sub-menu:hover .sub-menu,

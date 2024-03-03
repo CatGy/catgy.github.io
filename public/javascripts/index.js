@@ -6,6 +6,24 @@ function openModal(event, id, img, caption) {
   setTimeout(() => {
     $(`.${id}`)[0].showModal();
   }, 200);
+
+  console.log("openModal", event);
+  $(`.${id}`)[0].addEventListener("scroll", onScroll);
+
+  document.addEventListener("click", onClick);
+  function onClick(event) {
+    if (event.target.nodeName === "DIALOG") {
+      $(`.${id}`)[0].close();
+      document.removeEventListener("click", onClick);
+    }
+  }
+}
+
+function onScroll(event) {
+  console.log("scrolling");
+  if (event.type == "scroll") {
+    console.log("scrolling");
+  }
 }
 
 /** MENU SECTION */
@@ -75,6 +93,12 @@ function retrieve_theme() {
   }
 }
 
+/** SCROLL TO TOP */
+let scrollBtn = document.querySelector("#top_scroller");
+scrollBtn.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 /**CAROUSSEL SECTION */
 function leftCarrousselBtnPressed(imgList, captionList) {
   if (
@@ -82,6 +106,10 @@ function leftCarrousselBtnPressed(imgList, captionList) {
     $(".carousselImg").attr("ongoing") == "false"
   ) {
     let currIndex = imgList.indexOf($(".carousselImg").attr("src"));
+
+    if (currIndex == -1) {
+      currIndex = 0;
+    }
     if (currIndex == 0) {
       currIndex = imgList.length;
     }
