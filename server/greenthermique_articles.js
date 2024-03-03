@@ -12,6 +12,60 @@ const Content = [
     article_figures: [
       {
         link: "javascript:void(0)",
+        img: "/images/greenthermique/idea1.jpg",
+        alt: "Greenthermique logo Idea 1",
+        caption: "Logo Idea 1",
+        title: "",
+        text: "",
+        hasCopyright: true,
+        tributes: {
+          link: "https://www.freepik.com/free-vector/smart-home-technology-set-icons_4965965.htm",
+          text: "Image by studiogstock on Freepik",
+        },
+      },
+      {
+        link: "javascript:void(0)",
+        img: "/images/greenthermique/idea2.jpg",
+        alt: "Greenthermique logo Idea 2",
+        caption: "Logo Idea 2",
+        title: "",
+        text: "",
+        hasCopyright: true,
+        tributes: {
+          link: "http://www.freepik.com",
+          text: "Designed by Freepik",
+        },
+      },
+      {
+        link: "javascript:void(0)",
+        img: "/images/greenthermique/idea3.jpg",
+        alt: "Greenthermique logo Idea 3",
+        caption: "Logo Idea 3",
+        title: "",
+        text: "",
+        hasCopyright: true,
+        tributes: {
+          link: "https://www.freepik.com/free-vector/set-three-banners-with-renewable-energies_1048817.htm",
+          text: "Image by macrovector on Freepik",
+        },
+      },
+    ],
+    subtitle: "Research and Inspiration",
+    hasTitle: true,
+    hasSubtitle: true,
+    hasFigure: true,
+    article_content: "",
+    isContentList: false,
+    isNumberedList: false,
+    hasMoreImages: false,
+    article_img_caption: "Style frame by CatGy",
+  },
+  {
+    article_header: "",
+    article_leading_content: [""],
+    article_figures: [
+      {
+        link: "javascript:void(0)",
         img: "/images/greenthermique/LOGO1@4x.png",
         alt: "Greenthermique logo 1",
         caption: "Logo 1",
@@ -42,7 +96,7 @@ const Content = [
       },
     ],
     subtitle: "Logo concept",
-    hasTitle: true,
+    hasTitle: false,
     hasSubtitle: true,
     hasFigure: true,
     article_content:
@@ -142,7 +196,7 @@ const Content = [
     article_img_caption: "Style frame by CatGy",
   },
   {
-    article_header: "Storyboard",
+    article_header: "",
     article_figures: [
       {
         link: "javascript:void(0)",
@@ -188,9 +242,9 @@ const Content = [
         ],
       },
     ],
-    subtitle: "",
-    hasTitle: true,
-    hasSubtitle: false,
+    subtitle: "Storyboard",
+    hasTitle: false,
+    hasSubtitle: true,
     hasFigure: true,
     isContentList: false,
     isNumberedList: false,

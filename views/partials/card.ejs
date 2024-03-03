@@ -2,9 +2,12 @@
 <figure class="card <% if (fullScreen) { %> full <% } %>" <% if (isModal) { %> onclick="openModal(event, '<%= modal_id %>', '<%= imgsrc %>', <% if (captionList) {%><%- captionList %><%} else {%> '<%- caption %>' <% } %>)" <% } %>>
     <a href="<%= link %>">
         <div class="imgcard">
-        <img class="<% if (!isCard) { %> pictures <% } %> <% if (fullScreen) { %> full <% } %>" src="<%= imgsrc %>" alt="<%= imgalt %>">
+            <img class="<% if (!isCard) { %> pictures <% } %> <% if (fullScreen) { %> full <% } %>" src="<%= imgsrc %>" alt="<%= imgalt %>">
         </div>
-        <figcaption class="">
+        <figcaption class="">            
+        <% if (hasCopyright) {%> 
+            <a class="source-link" href="<%- tributes.link %>"><%- tributes.text %></a>
+        <% } %>
             <%- caption %>
         </figcaption>
         <% if (isCard) { %>
