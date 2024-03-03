@@ -48,9 +48,6 @@ app.use(function (err, req, res, next) {
   res.render("../../views/error");
 });
 const port = process.env.PORT || 3000;
-const ip = process.env.IP || "192.168.1.66";
-app.listen(port, ip, () => {
-  console.log(`Server is running on port: ${port} and IP: ${ip}`);
-});
+app.listen(port);
 
 module.exports = app;
