@@ -19,6 +19,20 @@ function openModal(event, id, img, caption) {
   }
 }
 
+// console.log("index.js loaded");
+// window.addEventListener("deviceorientation", handleOrientation, true);
+
+// function handleOrientation(event) {
+//   console.log(event);
+//   if (event.alpha == 90) {
+//     console.log("alpha is 90");
+//     let typer = document.getElementById("intro");
+//     typer.setAttribute(
+//       "style",
+//       "font-size:" + 2 + "vw" + "!important; color: rgb(156, 125, 47);"
+//     );
+//   }
+// }
 // function onScroll(event) {
 //   console.log("scrolling");
 //   if (event.type == "scroll") {

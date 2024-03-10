@@ -211,6 +211,7 @@ iframe {
   top: 0;
   margin-right: 10px;
   margin-top: 40px;
+  z-index: 5;
 }
 
 #top_scroller {
@@ -223,6 +224,7 @@ iframe {
   bottom: 0;
   margin-right: 10px;
   margin-bottom: 25px;
+  z-index: 5;
 }
 
 .tools ul {
@@ -342,7 +344,7 @@ section#welcome {
 #welcome h1 {
   z-index: 2;
   font-family: Arima !important;
-  height: 182px;
+  height: auto;
 }
 
 main #welcome {
@@ -385,12 +387,13 @@ main #welcome {
 
 .welcome-text {
   position: relative;
-  /* top: 50%;
-  right: 50%; */
-  transform: translate(50%, -50%);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
   text-transform: uppercase;
   font-family: Arima;
-  font-size: 1em;
+  font-size: 5vw;
   font-weight: 700;
   color: #ffffffd5;
   /* text-shadow: 1px 1px 1px #ffffff3c, 1px 2px 1px #ffffff3c,
@@ -1016,7 +1019,7 @@ dialog .carousselImg {
     width: 70% !important;
   }
 
-  a {
+  .card a {
     min-height: 300px;
   }
 
@@ -1048,7 +1051,7 @@ dialog .carousselImg {
   }
 
   .menu {
-    left: 100vw;
+    left: -100vw;
     position: absolute;
   }
 
@@ -1282,11 +1285,19 @@ dialog .carousselImg {
   .figure-caption > figcaption {
     display: none;
   }
+
+  .welcome-text {
+    font-size: 10vw !important;
+  }
 }
 
 @media screen and (max-width: 420px) {
-  a {
+  .card a {
     min-height: 270px;
+  }
+
+  .welcome-text {
+    font-size: 11vw !important;
   }
 }
 
@@ -1299,6 +1310,10 @@ dialog .carousselImg {
 @media screen and (max-width: 1010px) {
   .footer hr {
     display: none;
+  }
+
+  .welcome-text {
+    font-size: 7vw;
   }
 }
 

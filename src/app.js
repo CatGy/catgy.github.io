@@ -9,49 +9,27 @@ import homeRouter from "./server/api/routes/home.js";
 import portfolioRouter from "./server/api/routes/portfolio.js";
 import contactRouter from "./server/api/routes/contact.js";
 import aboutRouter from "./server/api/routes/about.js";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
-import { URL } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
-const __filename = new URL("", import.meta.url).pathname;
-const __dirname = new URL(".", import.meta.url).pathname;
-console.log(
-  path
-    .join(__dirname, "views")
-    .substring(1, path.join(__dirname, "views").length)
-);
+console.log(path.join(__dirname, "views"));
 var app = express();
 
 app.use(compression());
 // view engine setup
-app.set(
-  "views",
-  path
-    .join(__dirname, "views")
-    .substring(1, path.join(__dirname, "views").length)
-);
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
 app.use(
-  express.static(
-    path
-      .join(__dirname, "public")
-      .substring(1, path.join(__dirname, "public").length)
-  )
-);
-app.use(
-  favicon(
-    path
-      .join(__dirname, "public", "images", "favicon", "favicon.ico")
-      .substring(
-        1,
-        path.join(__dirname, "public", "images", "favicon", "favicon.ico")
-          .length
-      )
-  )
+  favicon(path.join(__dirname, "public", "images", "favicon", "favicon.ico"))
 );
 
 app.use("/", homeRouter);
