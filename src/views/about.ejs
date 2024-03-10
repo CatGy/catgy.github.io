@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('partials/head'); -%>
+</head>
+
+<body>
+    <header>
+        <%- include('partials/navbar'); -%>
+    </header>
+        <div class="hero-image">        
+            <img src="<%= data.image %>" alt="<%= data.imgalt %>">
+        </div>
+    <main>
+        <h1>
+            <%= data.title %>
+        </h1>
+        <div>
+            <p>
+                <%- data.content %>
+            </p>
+        </div>
+        
+    </main>
+    <footer>
+        <%- include('partials/footer'); -%>
+    </footer>
+</body>
+
+</html>
