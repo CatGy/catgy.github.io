@@ -9,7 +9,7 @@
 * {
   width: inherit;
   height: inherit;
-  user-select: none;
+  /*user-select: none;*/
 }
 
 canvas {
