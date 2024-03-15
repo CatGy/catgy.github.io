@@ -3,7 +3,7 @@ const Intro =
 const Tools = ["Adobe Photoshop", "Adobe Audition", "Adobe Premiere Pro"];
 const Content = [
   {
-    article_header: "Ideation",
+    article_header: "Ideation Process",
     article_image: "/images/helpo/paw-patrol-logo.png",
     article_img_alt: "Article image",
     subtitle: "",

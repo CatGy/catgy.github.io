@@ -21,12 +21,16 @@
         </div>
       </section>
       <hr/>
+      <h2 class="overview-text"><%- subtitle %></h2>
       <p class="descr"><%- description %></p> 
       <%- include('partials/portfolio_article', {_articles: articles}); -%>
     </main>
     <% if(hasLink) { %>
       <p><a class="link" href="<%= creditSrc %>"><%= linkName%></a></p>
     <% } %>
+    <div>
+      <%- include('partials/caroussel_images', {data: other_projects}); -%>
+    </div>
     <footer>
       <%- include('partials/footer'); -%>
     </footer>

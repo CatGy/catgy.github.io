@@ -9,8 +9,7 @@
     <header>
         <%- include('partials/navbar'); -%>
     </header>
-        <div class="hero-image">        
-            <img src="<%= data.image %>" alt="<%= data.imgalt %>">
+        <div class="hero-image">
         </div>
     <main>
         <h1>
@@ -20,8 +19,31 @@
             <p>
                 <%- data.content %>
             </p>
+            <hr>
+            <h2 class="item_title">Soft Skills</h2>
+            <p>
+                <%- data.softskills_text %>
+            </p>
+            <ul class="softskills">
+                <% data.softskills.forEach(function(item) { %>
+                    <li>
+                        <%= item %>
+                    </li>
+                <% }); %>
+            </ul>
+            <hr>
+            <h2 class="item_title">Hard Skills</h2>
+            <p>
+                <%- data.hardskills_text %>
+            </p>
+                <ul class="hardskills">
+                <% data.hardskills.forEach(function(item) { %>
+                    <li>
+                        <%- item -%>
+                    </li>
+                <% }); %>
+            </ul>
         </div>
-        
     </main>
     <footer>
         <%- include('partials/footer'); -%>

@@ -3,6 +3,7 @@
 
 <head>
   <%- include('partials/head'); -%>
+  <script src="/javascripts/animations.js" defer></script>
 </head>
 
 <body>
@@ -13,19 +14,21 @@
     </div>
   <main>
     <section id="welcome">
-    <h1 style="font-family:sans-serif;">
-      
-      <span
-        class="typer welcome-text"
-        id="intro"
-        data-words="Hi, I'm Cathy, I'm passionate about Graphic and Motion Designs, I enjoy creating and editing 3D objects,  I like animation and video production, Explore my work and feel free reach out to me for impactful design collaboration"
-        data-colors="#9c7d2f"
-        data-delay="100"
-        data-delete-delay="1400"
-        data-loop="1">
-      </span>
-    </h1>
-
+    <div id="typer-container">
+    <div class="wel">
+      <span class="wave">👋</span>
+      <span id="text1"></span>
+    </div>
+    <div id="text2" class="welcome-text"></div>
+    <div id="text3" class=""></div>
+    <ul>
+      <li id="pt1" class="sub-text" ></li>
+      <li id="pt2" class="sub-text"></li>
+      <li id="pt3" class="sub-text"></li>
+      <li id="pt4" class="sub-text"></li>
+      <li id="pt5" class="sub-text"></li>
+    </ul>
+    </div>
     </section>
     <!--<%- include('partials/hero_video', {video_src: vidsrc, vid_height: 500, vid_width: (500*1.78), ismp4: ismp4}); -%>-->
   </main>

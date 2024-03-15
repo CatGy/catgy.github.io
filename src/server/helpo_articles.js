@@ -8,7 +8,7 @@ const Tools = [
 ];
 const Content = [
   {
-    article_header: "Ideation",
+    article_header: "Ideation Process",
     article_image: "",
     article_img_alt: "",
     subtitle: "",
