@@ -36,6 +36,9 @@
   --text-shadow-clr-1: #cececef5;
   --text-shadow-clr-2: #0c0c0c;
   --text-shadow-clr-3: #000000;
+  --aboutme-hero-blur-stop-1: rgba(10, 25, 38, 1);
+  --aboutme-hero-blur-stop-2: rgba(255, 255, 255, 0);
+  --aboutme-hero-blur-stop-3: rgba(18, 41, 68, 1);
 }
 :root {
   --text-color: #333b3c;
@@ -55,6 +58,9 @@
   --text-shadow-clr-1: #000000;
   --text-shadow-clr-2: #dedede33;
   --text-shadow-clr-3: #070606;
+  --aboutme-hero-blur-stop-1: rgba(255, 255, 255, 1);
+  --aboutme-hero-blur-stop-2: rgba(255, 255, 255, 0);
+  --aboutme-hero-blur-stop-3: rgba(255, 255, 255, 1);
 }
 /*radial-gradient(circle, rgba(24, 52, 89, 1) 21%, rgba(10, 25, 38, 1) 56%)*/
 body {
@@ -81,6 +87,7 @@ a {
 h1 {
   font-size: 56px;
   font-family: Playfair Display;
+  margin-bottom: 50px;
 }
 
 h3 {
@@ -90,6 +97,7 @@ h3 {
 p {
   font: 100% Arima;
   font-weight: 500;
+  text-align: left;
 }
 
 main {
@@ -101,7 +109,7 @@ main {
 }
 
 main > div > p {
-  text-align: justify !important;
+  text-align: left !important;
 }
 
 main > div {
@@ -164,7 +172,7 @@ section .card {
 }
 
 article > div > p {
-  text-align: justify;
+  text-align: left;
 }
 
 article > div {
@@ -329,7 +337,7 @@ iframe {
 }
 
 .user_article li > p {
-  text-align: justify;
+  text-align: left;
 }
 
 .user_article ul {
@@ -457,7 +465,7 @@ main #welcome {
   flex-wrap: nowrap;
   text-transform: uppercase;
   font-family: Arima;
-  font-size: 5vw;
+  font-size: 3.5vw;
   font-weight: 700;
   color: var(--text-shadow-clr-main);
   /* text-shadow: 1px 1px 1px #ffffff3c, 1px 2px 1px #ffffff3c,
@@ -505,7 +513,7 @@ footer {
 }
 
 .descr {
-  text-align: justify;
+  text-align: left;
 }
 
 figure {
@@ -1038,7 +1046,6 @@ dialog .carousselImg {
   margin: 0;
 }
 
-
 .logo-container {
   display: flex;
   flex-direction: column;
@@ -1069,7 +1076,7 @@ dialog .carousselImg {
   margin-right: 100px;
 }
 
-.footer .nav-list li>ul {
+.footer .nav-list li > ul {
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -1403,7 +1410,7 @@ dialog .carousselImg {
   }
 
   .footer .nav-list {
-     width: 100%;
+    width: 100%;
   }
 }
 
@@ -1653,10 +1660,10 @@ dialog .carousselImg {
   height: 35em;
   margin-top: 100px;
   background: linear-gradient(
-      rgba(10, 25, 38, 1) 5%,
-      rgba(255, 255, 255, 0) 20%,
-      rgba(255, 255, 255, 0) 80%,
-      rgba(18, 41, 68, 1) 100%
+      var(--aboutme-hero-blur-stop-1) 5%,
+      var(--aboutme-hero-blur-stop-2) 20%,
+      var(--aboutme-hero-blur-stop-2) 80%,
+      var(--aboutme-hero-blur-stop-3) 100%
     ),
     url("../images/about/about-me.png");
   background-repeat: no-repeat;
