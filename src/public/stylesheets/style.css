@@ -6,15 +6,11 @@
   font-family: "Amsterdam";
   src: url("../fonts/Amsterdam.ttf");
 }
+
 * {
   width: inherit;
   height: inherit;
   /*user-select: none;*/
-}
-
-canvas {
-  display: block;
-  margin: 0 auto;
 }
 
 /* COMMON */
@@ -241,10 +237,14 @@ iframe {
   align-items: start;
   text-align: left;
   gap: 20px;
-  margin-top: 50px;
+  margin-top: 150px;
   height: fit-content;
   position: relative;
   font: 120% Arima;
+}
+
+#typer-container ul {
+  padding-left: 0;
 }
 
 .wave {

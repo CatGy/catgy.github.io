@@ -92,6 +92,12 @@ let theme_toggler = document.querySelector("#theme_toggler");
 let homeImage = document.querySelector("#wl-img");
 let carrousel = document.querySelector("#carousselImages");
 
+const carousel = new bootstrap.Carousel(carrousel, {
+  interval: 4000,
+  touch: false,
+  nextWhenVisible: true
+});
+
 theme_toggler.addEventListener("click", function () {
   if (document.body.classList.contains("light-mode")) {
     document.body.classList.add("dark-mode");
@@ -125,17 +131,21 @@ function retrieve_theme() {
     document.body.classList.add(theme);
   }
 
-  if (theme == "dark-mode" && homeImage) {
-    homeImage.classList.remove("welcome-image-dk");
-    homeImage.classList.add("welcome-image");
+  if (theme == "dark-mode") {
+    if(homeImage) {
+      homeImage.classList.remove("welcome-image-dk");
+      homeImage.classList.add("welcome-image");
+    }
+    if(carrousel) {
+      carrousel.classList.remove("carousel-dark");
+    }
+  } else {
+    if (homeImage) {
+      homeImage.classList.remove("welcome-image");
+      homeImage.classList.add("welcome-image-dk");
+    }
     if (carrousel) {
       carrousel.classList.add("carousel-dark");
-    }
-  } else if (homeImage) {
-    homeImage.classList.remove("welcome-image");
-    homeImage.classList.add("welcome-image-dk");
-    if (carrousel) {
-      carrousel.classList.remove("carousel-dark");
     }
   }
 }
