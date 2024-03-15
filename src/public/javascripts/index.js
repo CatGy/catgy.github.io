@@ -92,12 +92,6 @@ let theme_toggler = document.querySelector("#theme_toggler");
 let homeImage = document.querySelector("#wl-img");
 let carrousel = document.querySelector("#carousselImages");
 
-const carousel = new bootstrap.Carousel(carrousel, {
-  interval: 4000,
-  touch: false,
-  nextWhenVisible: true
-});
-
 theme_toggler.addEventListener("click", function () {
   if (document.body.classList.contains("light-mode")) {
     document.body.classList.add("dark-mode");

@@ -1038,6 +1038,7 @@ dialog .carousselImg {
   margin: 0;
 }
 
+
 .logo-container {
   display: flex;
   flex-direction: column;
@@ -1062,6 +1063,17 @@ dialog .carousselImg {
   list-style: none;
   padding: 0;
   text-align: left;
+}
+
+.footer .nav-list ul:nth-child(2) {
+  margin-right: 100px;
+}
+
+.footer .nav-list li>ul {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  margin-right: 0 !important;
 }
 
 .footer li ul {
@@ -1389,6 +1401,10 @@ dialog .carousselImg {
   .welcome-text {
     font-size: 11vw !important;
   }
+
+  .footer .nav-list {
+     width: 100%;
+  }
 }
 
 @media screen and (max-width: 1150px) {
@@ -1633,7 +1649,8 @@ dialog .carousselImg {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 100vh;
+  max-height: 100vh;
+  height: 35em;
   margin-top: 100px;
   background: linear-gradient(
       rgba(10, 25, 38, 1) 5%,
@@ -1642,6 +1659,9 @@ dialog .carousselImg {
       rgba(18, 41, 68, 1) 100%
     ),
     url("../images/about/about-me.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
 }
 /* HOME PAGE */
 .hero {
