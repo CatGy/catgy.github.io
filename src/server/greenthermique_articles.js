@@ -5,64 +5,10 @@ const Tools = ["Adobe Illustrator", "Adobe After Effects"];
 
 const Content = [
   {
-    article_header: "Ideation",
+    article_header: "Ideation Process",
     article_leading_content: [
-      "During our brainstorming phase, we wanted to craft an image that would resonate deeply with our audience. We knew that to convey the message of eco-friendliness effectively, our logo needed to be impactful and visually striking. That's why we explored various design options, ultimately settling on three logo variations that captured the interconnectedness between green energy and everyday life.",
+      "The logo designs had to illustrate the connection between green energy and everyday life, incorporating elements such as homes, landscapes, solar panels, and appliances. The design and colour scheme of each elements effectively communicated the business's core values and purpose.",
     ],
-    article_figures: [
-      {
-        link: "javascript:void(0)",
-        img: "/images/greenthermique/idea1.jpg",
-        alt: "Greenthermique logo Idea 1",
-        caption: "",
-        title: "Logo Idea 1",
-        text: "",
-        hasCopyright: true,
-        tributes: {
-          link: "https://www.freepik.com/free-vector/smart-home-technology-set-icons_4965965.htm",
-          text: "Image by studiogstock on Freepik",
-        },
-      },
-      {
-        link: "javascript:void(0)",
-        img: "/images/greenthermique/idea2.jpg",
-        alt: "Greenthermique logo Idea 2",
-        caption: "",
-        title: "Logo Idea 2",
-        text: "",
-        hasCopyright: true,
-        tributes: {
-          link: "http://www.freepik.com",
-          text: "Designed by Freepik",
-        },
-      },
-      {
-        link: "javascript:void(0)",
-        img: "/images/greenthermique/idea3.jpg",
-        alt: "Greenthermique logo Idea 3",
-        caption: "",
-        title: "Logo Idea 3",
-        text: "",
-        hasCopyright: true,
-        tributes: {
-          link: "https://www.freepik.com/free-vector/set-three-banners-with-renewable-energies_1048817.htm",
-          text: "Image by macrovector on Freepik",
-        },
-      },
-    ],
-    subtitle: "Research and Inspiration",
-    hasTitle: true,
-    hasSubtitle: true,
-    hasFigure: true,
-    article_content: "",
-    isContentList: false,
-    isNumberedList: false,
-    hasMoreImages: false,
-    article_img_caption: "Style frame by CatGy",
-  },
-  {
-    article_header: "",
-    article_leading_content: [""],
     article_figures: [
       {
         link: "javascript:void(0)",
@@ -96,7 +42,7 @@ const Content = [
       },
     ],
     subtitle: "Logo concept",
-    hasTitle: false,
+    hasTitle: true,
     hasSubtitle: true,
     hasFigure: true,
     article_content:
@@ -230,11 +176,26 @@ const Content = [
     hasTitle: true,
     hasSubtitle: false,
     hasFigure: false,
-    article_content: ["Exploration of logo 2 animation."],
+    article_content: [""],
     isContentList: false,
     isNumberedList: false,
     hasMoreImages: false,
     article_img_caption: "Designed by CatGy",
+  },
+  {
+    article_header: "Reflection",
+    article_leading_content: [""],
+    article_figures: [],
+    subtitle: "",
+    hasTitle: true,
+    hasSubtitle: false,
+    hasFigure: false,
+    article_content:
+      "Overall, this project was successful and conveyed the essence of the brand. The owner was happy with the outcome of my work for his business.",
+    isContentList: false,
+    isNumberedList: false,
+    hasMoreImages: false,
+    article_img_caption: "Style frame by CatGy",
   },
 ];
 

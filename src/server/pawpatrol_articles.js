@@ -9,31 +9,27 @@ const Tools = [
 ];
 const Content = [
   {
-    article_header: "Ideation",
-    article_image: "",
-    article_img_alt: "",
-    subtitle: "",
-    hasTitle: true,
-    hasSubtitle: false,
-    hasFigure: false,
-    article_content: [
-      "Throughout this interview, the owner of the store explained the challenges she faced while opening her store in 2022 during the Covid-19 pandemic and also shared pieces of advices for success.",
-    ],
-    isContentList: false,
-    isNumberedList: false,
-    hasMoreImages: false,
-    article_img_caption: "Designed by CatGy",
-    hasLink: false,
-    link_name: "Image by starline",
-  },
-  {
-    article_header: "",
+    article_header: "Ideation Process",
     article_image: "",
     article_img_alt: "",
     subtitle: "Storyboard and Script",
-    hasTitle: false,
+    hasTitle: true,
     hasSubtitle: true,
-    hasFigure: false,
+    hasFigure: true,
+    article_figures: [
+      {
+        link: "javascript:void(0)",
+        img: "/images/pawpatrol/paw_patrol_storyboard.png",
+        alt: "PawPatrol storyboard",
+        caption: "Click for more details",
+        captionList: ["'Storyboard'"],
+        title: "Storyboard",
+        text: "",
+        fullScreen: true,
+        modal_id: "pwst1",
+        isModal: true,
+      },
+    ],
     article_content: [
       "I brainstormed ideas and outlined a storyboard and script that would effectively showcase the essence of the Paw Patrol brand. The script emphasized the show's positive values and engaging storytelling, aiming to captivate both children and adults alike. The script was crafted to highlight the show’s most popular catch phrases of the tv show with their respective pups and rides.",
     ],

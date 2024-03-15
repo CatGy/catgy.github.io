@@ -1,56 +1,25 @@
-import * as PIXI from "pixi";
+window.onload = function () {
+  console.log("animations.js loaded");
 
-const smokeImage =
-  "https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png";
-const app = new Application(window.innerWidth, window.innerHeight, {
-  backgroundAlpha: 0,
-});
-let canvas = document.getElementById("smokeCanvas");
-canvas.appendChild(app.view);
+  var theater = theaterJS();
+  let options = { accuracy: 1, speed: 1, minSpeed: 0.6, maxSpeed: 1.2 };
+  theater
+    .addActor("text1", { ...options, maxSpeed: 2, speed: 1.2 })
+    .addActor("text2", options)
+    .addActor("text3", options)
+    .addActor("pt1", options)
+    .addActor("pt2", options)
+    .addActor("pt3", options)
+    .addActor("pt4", options)
+    .addActor("pt5", options);
 
-window.addEventListener("resize", () => {
-  app.renderer.resize(window.innerWidth, window.innerHeight);
-});
-
-const smokes = new Container();
-app.stage.addChild(smokes);
-
-const smokeTexture = await Texture.fromImage(smokeImage);
-
-smokeTexture.baseTexture.width = window.innerWidth;
-smokeTexture.baseTexture.height = window.innerHeight;
-const smokeParticles = [];
-
-for (let p = 0; p < 40; p++) {
-  const particle = new Sprite(smokeTexture);
-  particle.position.set(
-    window.innerWidth / 2 - (Math.random() * 800 - 400),
-    window.innerHeight / 2 - (Math.random() * 800 - 400)
-  );
-  particle.anchor.set(0.5);
-  particle.rotation = Math.random() * 360;
-  particle.scale.set(1.5 + Math.random() * 0.5);
-  particle.alpha = 0.5;
-  particle.blendMode = PIXI.BLEND_MODES.SCREEN;
-  particle.tint = 0xffffff;
-  particle._speed = (r(0, 100) - 50) / 10000;
-  smokes.addChild(particle);
-  smokeParticles.push(particle);
-}
-
-app.ticker.speed = 0.5;
-app.ticker.add((delta) => {
-  animate(delta);
-});
-
-function animate(delta) {
-  let sp = smokeParticles.length;
-  while (sp--) {
-    const x = smokeParticles[sp]._speed;
-    smokeParticles[sp].rotation += delta * x;
-  }
-}
-
-function r(min, max) {
-  return Math.floor(Math.random() * (max - min) + 1) + min;
-}
+  theater
+    .addScene("text1: Hi, I'm Cathy! ", 400)
+    .addScene("text2:I am a Multimedia Designer", 100)
+    .addScene("text3:mainly in:", 100)
+    .addScene("pt1:• Graphic Designs", 100)
+    .addScene("pt2:• Motion Design", 100)
+    .addScene("pt3:• 3D Design", 100)
+    .addScene("pt4:• Animation", 100)
+    .addScene("pt5:• Video Production", 100);
+};

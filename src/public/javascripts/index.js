@@ -90,6 +90,7 @@ function closeSubMenu(event) {
 /** TOGGLER SECTION */
 let theme_toggler = document.querySelector("#theme_toggler");
 let homeImage = document.querySelector("#wl-img");
+let carrousel = document.querySelector("#carousselImages");
 
 theme_toggler.addEventListener("click", function () {
   if (document.body.classList.contains("light-mode")) {
@@ -99,10 +100,12 @@ theme_toggler.addEventListener("click", function () {
       homeImage.classList.remove("welcome-image-dk");
       homeImage.classList.add("welcome-image");
     }
+    carrousel.classList.remove("carousel-dark");
     localStorage.setItem("website_theme", "dark-mode");
   } else {
     document.body.classList.add("light-mode");
     document.body.classList.remove("dark-mode");
+    carrousel.classList.add("carousel-dark");
     if (homeImage) {
       homeImage.classList.remove("welcome-image");
       homeImage.classList.add("welcome-image-dk");
@@ -121,9 +124,11 @@ function retrieve_theme() {
   if (theme == "dark-mode" && homeImage) {
     homeImage.classList.remove("welcome-image-dk");
     homeImage.classList.add("welcome-image");
+    carrousel.classList.add("carousel-dark");
   } else if (homeImage) {
     homeImage.classList.remove("welcome-image");
     homeImage.classList.add("welcome-image-dk");
+    carrousel.classList.remove("carousel-dark");
   }
 }
 

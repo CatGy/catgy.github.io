@@ -3,7 +3,7 @@ const Intro =
 const Tools = ["Adobe 3D Stager", "Adobe Illustrator", "Adobe Aero Beta"];
 const Content = [
   {
-    article_header: "Ideation",
+    article_header: "Ideation Process",
     article_image: "",
     article_img_alt: "",
     subtitle: "Research and Inspiration",
@@ -27,7 +27,21 @@ const Content = [
     subtitle: "Design and Development",
     hasTitle: false,
     hasSubtitle: true,
-    hasFigure: false,
+    hasFigure: true,
+    article_figures: [
+      {
+        link: "javascript:void(0)",
+        img: "/images/furnitureapp/catgy_furn_storyboard@4x.png",
+        alt: "Furniture App storyboard",
+        caption: "Click for more details",
+        captionList: ["'Storyboard'"],
+        title: "Storyboard",
+        text: "",
+        fullScreen: true,
+        modal_id: "funst1",
+        isModal: true,
+      },
+    ],
     article_content: [
       "With the tools and technologies identified, the design and development process began. This involved creating 3D models of the furniture pieces using Adobe 3D Stager, selecting a colour palette to convey the desired aesthetic, and importing the models into Adobe Aero to build the AR experience.",
     ],
@@ -62,22 +76,6 @@ const Content = [
     hasFigure: false,
     article_content: [
       "Using Adobe 3D Stager, I crafted 3D furniture pieces, selecting a colour palette consisting of brown, tan, burgundy, olive green, and beige to convey modernity and quality. These 3D models were then imported into Adobe Aero to create the AR installation triggered by a QR code.",
-    ],
-    isContentList: false,
-    isNumberedList: false,
-    hasMoreImages: false,
-    article_img_caption: "Designed by CatGy",
-  },
-  {
-    article_header: "",
-    article_image: "/images/pawpatrol/merchandise.png",
-    article_img_alt: "Article image",
-    subtitle: "Shots/ Screens for the interview",
-    hasTitle: false,
-    hasSubtitle: true,
-    hasFigure: false,
-    article_content: [
-      "Screenshots or video clips demonstrating the AR experience in Adobe Aero, showcasing the furniture pieces in various color options and styles.Visuals of the QR code used to trigger the AR installation, providing users with easy access to the virtual shopping experience.User interface (UI) screens from the AR app, displaying options for browsing furniture, selecting items, and customizing their appearance in real-time.",
     ],
     isContentList: false,
     isNumberedList: false,
