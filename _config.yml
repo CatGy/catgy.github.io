@@ -1,0 +1,31 @@
+# _config.yml
+
+# Site settings
+title: "My Portfolio"
+description: "Showcase of my projects"
+baseurl: "/" # Change this to your repository name
+url: "https://catgy.github.io" # Change this to your GitHub username
+
+# Deployment settings
+markdown: kramdown
+permalink: pretty
+paginate: 5
+
+# Exclude files and directories from Jekyll processing
+exclude:
+  - node_modules
+  - src
+  - build.js
+  - package.json
+  - package-lock.json
+  - .github
+  - README.md
+
+# Disable Jekyll processing (useful for pre-built static sites)
+# GitHub Pages will serve static files as-is
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: null
