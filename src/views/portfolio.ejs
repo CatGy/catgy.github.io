@@ -14,13 +14,13 @@
             <%= title %>
         </h1>
         <p class="subtitle">Explore my projects!</p>
-        
-        <%- include('partials/gridview', {isCard: true}); -%>
+
+        <%- include('partials/gridview', {isCard: true, data: projects }); -%>
     </main>
-    
-  <footer>
-    <%- include('partials/footer'); -%>
-  </footer>
+
+    <footer>
+        <%- include('partials/footer'); -%>
+    </footer>
 </body>
 
 </html>
