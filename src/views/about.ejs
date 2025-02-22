@@ -9,11 +9,11 @@
     <header>
         <%- include('partials/navbar'); -%>
     </header>
-        <div class="hero-image">
-        </div>
+    <div class="hero-image">
+    </div>
     <main>
         <h1>
-            <%= data.title %>
+            <%= title %>
         </h1>
         <div>
             <p>
@@ -29,19 +29,19 @@
                     <li>
                         <%= item %>
                     </li>
-                <% }); %>
+                    <% }); %>
             </ul>
             <hr>
             <h2 class="item_title">Hard Skills</h2>
             <p>
                 <%- data.hardskills_text %>
             </p>
-                <ul class="hardskills">
+            <ul class="hardskills">
                 <% data.hardskills.forEach(function(item) { %>
                     <li>
                         <%- item -%>
                     </li>
-                <% }); %>
+                    <% }); %>
             </ul>
         </div>
     </main>

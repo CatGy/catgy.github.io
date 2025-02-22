@@ -1,7 +1,7 @@
 import express from "express";
 var router = express.Router();
 
-const AboutData = {
+export const AboutData = {
   title: "About Me",
   image: "/images/about/about-me.png",
   imgalt: "My picture",

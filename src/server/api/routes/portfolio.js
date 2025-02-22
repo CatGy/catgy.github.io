@@ -9,7 +9,7 @@ import furnitureArticles from "../../furniture_articles.js";
 /**
  * Portfolio page data
  */
-const PortfolioData = [
+export const PortfolioData = [
   {
     link: "/portfolio/greenthermique",
     img: "/images/greenthermique/green_thermique.png",
@@ -60,7 +60,7 @@ const PortfolioData = [
   },
 ];
 
-const other_projects = [
+export const other_projects = [
   {
     link: "https://youtu.be/3ScW_ZBirfU",
     imgSrc: "/images/furnitureapp/Catgy_Furn_App.png",
