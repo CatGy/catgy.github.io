@@ -96,6 +96,7 @@ async function generateStaticFiles() {
   try {
     // Generate Static Pages for Routes
     for (let route of routes) {
+    
       let outputPath = path.join(
         OUTPUT_DIR,
         route.url === '/' ? 'index.html' : `${route.url}.html`
@@ -122,6 +123,7 @@ async function generateStaticFiles() {
     projects.forEach((project) => {
       const projectName = project.name;
       const projectDir = path.join(OUTPUT_DIR, 'portfolio', projectName);
+
       createDir(projectDir);
 
       // Correctly link the video sources and formats
@@ -204,28 +206,28 @@ async function generateStaticFiles() {
 
 
       // Generate Article Detail Pages
-      project.data.forEach((article, index) => {
-        const articleDir = path.join(projectDir, `article-${index + 1}`);
-        createDir(articleDir);
+    //   project.data.forEach((article, index) => {
+    //     const articleDir = path.join(projectDir, `article-${index + 1}`);
+    //     createDir(articleDir);
 
-        ejs.renderFile(
-          path.join(__partialsDir, 'portfolio_article.ejs'),
-          {
-            title: article.article_header || `Article ${index + 1}`,
-            pfarticles: article,
-          },
-          (err, html) => {
-            if (err) throw err;
-            fs.writeFileSync(
-              path.join(articleDir, 'index.html'),
-              html
-            );
-            console.log(
-              `✅ Generated: portfolio/${projectName}/article-${index + 1}/index.html`
-            );
-          }
-        );
-      });
+    //     ejs.renderFile(
+    //       path.join(__partialsDir, 'portfolio_article.ejs'),
+    //       {
+    //         title: article.article_header || `Article ${index + 1}`,
+    //         pfarticles: article,
+    //       },
+    //       (err, html) => {
+    //         if (err) throw err;
+    //         fs.writeFileSync(
+    //           path.join(articleDir, 'index.html'),
+    //           html
+    //         );
+    //         console.log(
+    //           `✅ Generated: portfolio/${projectName}/article-${index + 1}/index.html`
+    //         );
+    //       }
+    //     );
+    //   });
     });
 
     // Copy static assets (CSS, JS, Images, etc.)
