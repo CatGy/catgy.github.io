@@ -235,6 +235,11 @@ async function generateStaticFiles() {
       await fs.copy(publicDir, OUTPUT_DIR);
       console.log('📂 Copied static assets.');
     }
+
+    const noJekyllFile = path.join(OUTPUT_DIR, '.nojekyll');
+    fs.writeFileSync(noJekyllFile, '');
+    console.log('✅ Created .nojekyll to disable Jekyll processing');
+
   } catch (error) {
     console.error('❌ Error generating static files:', error);
   }
